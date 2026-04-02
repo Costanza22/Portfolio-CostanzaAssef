@@ -156,6 +156,24 @@
   font-weight: 600;
 }
 
+.spotlight-carousel__panel--stack {
+  min-height: 24rem;
+  justify-content: flex-start;
+  padding-top: 1.5rem;
+  gap: 0.5rem;
+}
+
+.spotlight-carousel__panel--stack h3 {
+  margin-bottom: 0.15rem;
+}
+
+.spotlight-carousel__stack-note {
+  margin: 0 0 0.65rem;
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
 .spotlight-carousel__kicker {
   font-size: 0.7rem;
   font-weight: 600;

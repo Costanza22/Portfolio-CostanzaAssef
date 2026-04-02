@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { person } from "@/lib/data";
+import { heroStackLines, person } from "@/lib/data";
 
 export function HeroCarousel() {
   return (
@@ -61,8 +61,8 @@ export function HeroCarousel() {
                 <span className="spotlight-carousel__kicker">Lugar</span>
                 <h3>Santa Catarina</h3>
                 <p>
-                  Moro em <strong>Santa Catarina</strong>. <strong>Tenho interesse em Florianópolis presencial</strong> ou{" "}
-                  <strong> se for outra cidade, remoto</strong> 
+                  Moro em <strong>Santa Catarina</strong>. <strong>Florianópolis presencial</strong> ou{" "}
+                  <strong>outra cidade em remoto</strong> — a gente alinha.
                 </p>
                 <p>
                   Já fui estagiária de inteligência de mercado, passei por suporte com AD na Schulze Advogados
@@ -73,22 +73,17 @@ export function HeroCarousel() {
             </div>
 
             <div className="spotlight-carousel__slide">
-              <div className="spotlight-carousel__panel">
-                <span className="spotlight-carousel__kicker">O que uso</span>
-                <h3>Minha stack</h3>
-                <p>
-                  <strong>Front-end:</strong> React,Next,TypeScript 
+              <div className="spotlight-carousel__panel spotlight-carousel__panel--stack">
+                <span className="spotlight-carousel__kicker">Stack</span>
+                <h3>Igual à seção Habilidades</h3>
+                <p className="spotlight-carousel__stack-note">
+                  Resumo para primeira impressão — o detalhe está mais abaixo na página.
                 </p>
-                <p>
-                  <strong>Back-end:</strong> Node.js,Python
-                
-                </p>
-                <p>
-                  <strong>Banco de dados:</strong> MySQL
-                </p>
-                <p>
-                  <strong>DevOps e outras ferramentas:</strong> Git, Docker, Postman
-                </p>
+                {heroStackLines.map((row) => (
+                  <p key={row.label}>
+                    <strong>{row.label}:</strong> {row.text}
+                  </p>
+                ))}
               </div>
             </div>
           </div>

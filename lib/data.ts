@@ -1,7 +1,7 @@
 export const person = {
   name: "Costanza Pasquotto Assef",
   title: "Desenvolvedora Full Stack",
-  focus: "Full stack, viés em front",
+  focus: "Web, mobile, back-end e IA aplicada",
   location: "Santa Catarina, Brasil",
   availability: "Florianópolis presencial ou remoto — A combinar.",
   phone: "(47) 98804-1237",
@@ -12,7 +12,17 @@ export const person = {
 } as const;
 
 export const intro =
-  "Olá! Me chamo Costanza, sou Engenheira de Software, estudante de Especialização em Inteligência Aplicada pela UFPR";
+  "Olá! Sou Costanza, engenheira de software. Trabalho bem de front (React, Next), mas também fecho API em Node, app em React Native/Expo e projeto de visão computacional com Python — hoje cursando especialização em IA Aplicada na UFPR.";
+
+/** Resumo do slide “Stack” no hero — alinhado à seção Habilidades */
+export const heroStackLines = [
+  { label: "Front-end", text: "React, Next.js, TypeScript · HTML5 e CSS" },
+  { label: "Mobile", text: "React Native, Expo" },
+  { label: "Back-end & APIs", text: "Node.js, Express, TypeScript · FastAPI, Flask · REST" },
+  { label: "Dados", text: "MySQL, SQLite" },
+  { label: "IA / visão computacional", text: "Python, PyTorch, TensorFlow, OpenCV" },
+  { label: "DevOps & ferramentas", text: "Git, Docker, Postman · Tableau (análise)" },
+] as const;
 export const experience = [
   {
     role: "Desenvolvedora Mobile",
@@ -58,6 +68,42 @@ export const experience = [
 
 export const projects = [
   {
+    name: "FindThem",
+    tagline: "TCC (UFPR) — desaparecidos e reconhecimento facial",
+    period: "projeto autoral",
+    context: "Projeto autoral · TCC · IA aplicada",
+    description:
+      "Trabalho de conclusão da especialização em IA: sistema para apoiar identificação de pessoas desaparecidas com visão computacional e busca por similaridade de embeddings. Há documento de arquitetura, ética e privacidade no repo.",
+    bullets: [
+      "Front em React: casos, avistamentos, tela de possíveis matches.",
+      "Back em FastAPI: embeddings faciais, API REST, base vetorial para similaridade.",
+    ],
+    links: [
+      { label: "Código", href: "https://github.com/Costanza22/Find-Them" },
+      { label: "Demo", href: "https://find-them-swart.vercel.app" },
+    ],
+    accent: "teal" as const,
+    featured: "ia" as const,
+  },
+  {
+    name: "BHT Detector",
+    tagline: "Detector com visão computacional",
+    period: "jun. 2024 — dez. 2025",
+    context: "Projeto autoral · IA em produção",
+    description:
+      "Detector de BHT (butylated hydroxytoluene) na lista de ingredientes usando visão computacional: back-end em Python com FastAPI, front em React e TypeScript, experimentos com PyTorch e TensorFlow para leitura de rótulos e alergias alimentares.",
+    bullets: [
+      "PyTorch e TensorFlow na parte de modelo.",
+      "FastAPI ou Flask servindo inferência; React + TypeScript na interface; Docker para acesso fácil e portabilidade.",
+    ],
+    links: [
+      { label: "Demo", href: "https://www.bhtdetector.com.br/" },
+      { label: "Código", href: "https://github.com/Costanza22/BHT-Detector" },
+    ],
+    accent: "teal" as const,
+    featured: "ia" as const,
+  },
+  {
     name: "GlucoCare",
     tagline: "App para acompanhar glicose — pensado para quem vive com diabetes",
     period: "projeto autoral",
@@ -73,23 +119,6 @@ export const projects = [
       { label: "Demo", href: "https://gluco-care-kappa.vercel.app" },
     ],
     accent: "coral" as const,
-  },
-  {
-    name: "FindThem",
-    tagline: "TCC (UFPR) — desaparecidos e reconhecimento facial",
-    period: "projeto autoral",
-    context: "Projeto autoral · TCC · React · FastAPI · vetores",
-    description:
-      "Trabalho de conclusão da especialização em IA: sistema para apoiar identificação de pessoas desaparecidas com visão computacional e busca por similaridade de embeddings. Há documento de arquitetura, ética e privacidade no repo.",
-    bullets: [
-      "Front em React: casos, avistamentos, tela de possíveis matches.",
-      "Back em FastAPI: embeddings faciais, API REST, base vetorial para similaridade.",
-    ],
-    links: [
-      { label: "Código", href: "https://github.com/Costanza22/Find-Them" },
-      { label: "Demo", href: "https://find-them-swart.vercel.app" },
-    ],
-    accent: "teal" as const,
   },
   {
     name: "Joi Patrio",
@@ -109,23 +138,6 @@ export const projects = [
     ],
     accent: "coral" as const,
   },
-  {
-    name: "BHT Detector",
-    tagline: "Detector com visão computacional",
-    period: "jun. 2024 — dez. 2025",
-    context: "Projeto autoral · Remoto",
-    description:
-      "Detector de BHT (butylated hydroxytoluene) na lista de ingredientes usando visão computacional: back-end em Python com FastAPI, front em React e TypeScript, experimentos com PyTorch e TensorFlow para leitura de rótulos e alergias alimentares.",
-    bullets: [
-      "PyTorch e TensorFlow na parte de modelo.",
-      "FastAPI ou Flask servindo inferência; React + TypeScript na interface; Docker para acesso fácil e portabilidade.",
-    ],
-    links: [
-      { label: "Demo", href: "https://www.bhtdetector.com.br/" },
-      { label: "Código", href: "https://github.com/Costanza22/BHT-Detector" },
-    ],
-    accent: "teal" as const,
-  },
 ] as const;
 
 export const volunteering = [
@@ -134,7 +146,9 @@ export const volunteering = [
     org: "CyberDimension",
     period: "fev. 2025 — atual",
     bullets: [
-      "Conteúdo e prática em segurança — reforço o que já venho estudando por fora do trabalho formal.",
+      "Participo dos encontros e da curadoria de conteúdo da CyberDimension: segurança digital e conscientização, em tom comunitário (não é consultoria paga nem suporte corporativo).",
+      "Ajudo a espalhar boas práticas — senhas, privacidade, golpes comuns, cuidado com o que clica — e a conectar quem está aprendendo com quem já tem mais experiência no grupo.",
+      "Para mim encaixa com a formação: ética, dados sensíveis e risco aparecem tanto em IA quanto em produto web; o voluntariado mantém esse assunto vivo fora do código.",
     ],
   },
 ] as const;

@@ -10,7 +10,7 @@ export function VolunteerSection() {
             Voluntariado
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/75">
-            Atuação na comunidade CYBERDIMENSION, focada em promover conhecimento em tecnologia, segurança digital e colaboração entre profissionais. Contribuição na divulgação da comunidade, conexão entre membros e incentivo ao aprendizado e desenvolvimento no ecossistema digital.
+            A CyberDimension é uma comunidade em volta de segurança e tecnologia. Eu entro como voluntária: apoio divulgação de conteúdo, participo dos encontros e ajudo a puxar conversa sobre risco digital com linguagem acessível — sem misturar com o trabalho pago de suporte ou desenvolvimento.
           </p>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
