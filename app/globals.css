@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@import "./spotlight-carousel.css";
+
+:root {
+  /* Paleta puxada do retrato: verde do óculos + bege do blazer + cinza de estúdio */
+  --paper: #ebe6dc;
+  --paper-elevated: #f3eee6;
+  --surface-card: #faf7f1;
+  --surface-muted: #e3ddd3;
+  --ink: #1a1f1e;
+  --ink-soft: #3d4543;
+  --ink-muted: #5a6360;
+  --line: #c9c2b6;
+  --line-strong: #b0a89a;
+  --accent: #1f7a68;
+  --accent-deep: #145c4e;
+  --accent-soft: rgba(31, 122, 104, 0.14);
+  --teal: #2a7d72;
+  --teal-soft: rgba(42, 125, 114, 0.12);
+  --forest: #12302a;
+  --forest-hover: #1a4038;
+  --sand: #d4c4ae;
+  --photo-bg: #d8d3cd;
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans-plex);
+  --font-serif: var(--font-serif-fraunces);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sans-plex), system-ui, sans-serif;
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--ink);
+}
