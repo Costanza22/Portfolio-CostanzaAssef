@@ -12,9 +12,9 @@ export function ProjectsSection() {
       <div className="mx-auto max-w-6xl px-5 md:px-8">
         <SectionHeading
           id="projetos"
-          eyebrow="Fora do expediente"
+          eyebrow="Autorais"
           title="Projetos"
-          description="Projetos pessoais e contribuições open source, com foco em desenvolvimento web e IA"
+          description="Tudo aqui é projeto autoral — ideia, código e decisão técnica minhas (o FindThem entra como TCC da especialização na UFPR)."
         />
         <div className="grid gap-8 lg:grid-cols-2">
           {projects.map((p) => (

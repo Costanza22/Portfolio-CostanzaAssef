@@ -59,11 +59,11 @@ export const experience = [
 export const projects = [
   {
     name: "GlucoCare",
-    tagline: "Glicose no bolso — React + Node + SQLite",
+    tagline: "App para acompanhar glicose — pensado para quem vive com diabetes",
     period: "projeto autoral",
-    context: "Full stack · Vite + Express",
+    context: "Projeto autoral · Vite + Express + SQLite",
     description:
-      "App para registrar medições (mg/dL), ver tendência e histórico. Com o servidor no ar, tudo vai para SQLite via API; se cair, o front segue no localStorage e o header avisa “Dados locais”.",
+      "Ferramenta para registrar medições de glicose (mg/dL), enxergar tendência e histórico — útil para diabéticos e para quem precisa monitorar a glicemia no dia a dia. Com o servidor no ar, os dados vão para SQLite via API; se a API cair, o front continua no localStorage e o header avisa “Dados locais”.",
     bullets: [
       "Dashboard e resumo (média 7 dias, meta 70–140, tendência), gráfico com Recharts, tema claro/escuro.",
       "CRUD completo, filtros, busca, export CSV, backup/restauração em JSON.",
@@ -77,8 +77,8 @@ export const projects = [
   {
     name: "FindThem",
     tagline: "TCC (UFPR) — desaparecidos e reconhecimento facial",
-    period: "especialização IA · UFPR",
-    context: "React · FastAPI · vetores",
+    period: "projeto autoral",
+    context: "Projeto autoral · TCC · React · FastAPI · vetores",
     description:
       "Trabalho de conclusão da especialização em IA: sistema para apoiar identificação de pessoas desaparecidas com visão computacional e busca por similaridade de embeddings. Há documento de arquitetura, ética e privacidade no repo.",
     bullets: [
@@ -95,14 +95,15 @@ export const projects = [
     name: "Joi Patrio",
     tagline: "Patrimônio histórico em mapa (Joinville)",
     period: "abr. 2024 — jan. 2026",
-    context: "Projeto independente · Remoto",
+    context: "Projeto autoral · Remoto",
     description:
       "Projeto pessoal que saiu da curiosidade pelos casarões da cidade. Hoje tem site, variante mobile e um app de mapa",
     bullets: [
       "Desenvolvimento de um site e aplicativo móvel para mapear o patrimônio histórico de Joinville, utilizando React, Next.js e React Native. O projeto inclui um back-end em Node.js.",
     ],
     links: [
-      { label: "Web", href: "https://github.com/Costanza22/Joi-Patrio-Novo" },
+      { label: "Demo", href: "https://joi-patrio.vercel.app" },
+      { label: "Código", href: "https://github.com/Costanza22/Joi-Patrio-Novo" },
       { label: "Mobile", href: "https://github.com/Costanza22/patrio-visio-pro" },
       { label: "Mapa", href: "https://github.com/Costanza22/Heritage-App" },
     ],
@@ -112,14 +113,17 @@ export const projects = [
     name: "BHT Detector",
     tagline: "Detector com visão computacional",
     period: "jun. 2024 — dez. 2025",
-    context: "Projeto independente · Remoto",
+    context: "Projeto autoral · Remoto",
     description:
-      "Desenvolvimento de um detector de BHT  butylated hydroxytoluene usando visão computacional, com back-end em Python e FastAPI, e front-end em React e TypeScript. O projeto inclui experimentação com modelos de machine learning para detecção precisa de alergias alimentares, utilizando PyTorch e TensorFlow.",
+      "Detector de BHT (butylated hydroxytoluene) na lista de ingredientes usando visão computacional: back-end em Python com FastAPI, front em React e TypeScript, experimentos com PyTorch e TensorFlow para leitura de rótulos e alergias alimentares.",
     bullets: [
       "PyTorch e TensorFlow na parte de modelo.",
       "FastAPI ou Flask servindo inferência; React + TypeScript na interface; Docker para acesso fácil e portabilidade.",
     ],
-    links: [{ label: "Repositório", href: "https://github.com/Costanza22/BHT-Detector" }],
+    links: [
+      { label: "Demo", href: "https://www.bhtdetector.com.br/" },
+      { label: "Código", href: "https://github.com/Costanza22/BHT-Detector" },
+    ],
     accent: "teal" as const,
   },
 ] as const;
